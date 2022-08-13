@@ -1,62 +1,62 @@
 {
-  "name": "fastcomplete",
-  "displayName": "Postfix Completion",
-  "description": "Postfix completion",
-  "publisher": "HowieYoung",
-  "version": "1.0.71",
-  "keywords": [
-    "postfix",
-    "language",
-    "complete",
-    "completion"
-  ],
-  "engines": {
-    "vscode": "^1.46.0"
-  },
-  "categories": [
-    "Programming Languages",
-    "Snippets",
-    "Other"
-  ],
-  "activationEvents": [
-    "*"
-  ],
-  "main": "./out/extension.js",
-  "contributes": {
-    "type": "object",
-    "properties": {
-      "postfixcompletion.support.languages": {
-        "type": "array",
-        "default": [
-          "*"
-        ],
-        "description": "postfix completion 支持的语言"
-      }
+    "name": "lzn-postfix-completion",
+    "displayName": "lzn Postfix Completion",
+    "description": "lzn Postfix completion",
+    "publisher": "lzn",
+    "version": "1.0.71",
+    "keywords": [
+        "postfix",
+        "language",
+        "complete",
+        "completion"
+    ],
+    "engines": {
+        "vscode": "^1.46.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Snippets",
+        "Other"
+    ],
+    "activationEvents": [
+        "*"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "type": "object",
+        "properties": {
+            "postfixcompletion.support.languages": {
+                "type": "array",
+                "default": [
+                    "*"
+                ],
+                "description": "postfix completion 支持的语言"
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./ ",
+        "pretest": "npm run compile && npm run lint",
+        "lint": "eslint src --ext ts",
+        "test": "node ./out/test/runTest.js"
+    },
+    "dependencies": {
+        "glob": "^7.1.2",
+        "reflect-metadata": "^0.1.13"
+    },
+    "devDependencies": {
+        "@types/glob": "^7.1.3",
+        "@types/mocha": "^8.0.4",
+        "@types/node": "^12.11.7",
+        "@types/vscode": "^1.46.0",
+        "@typescript-eslint/eslint-plugin": "^4.14.1",
+        "@typescript-eslint/parser": "^4.14.1",
+        "eslint": "^7.19.0",
+        "mocha": "^8.2.1",
+        "ts-loader": "^8.1.0",
+        "typescript": "^4.7.4",
+        "vscode-test": "^1.5.0"
     }
-  },
-  "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./ ",
-    "pretest": "npm run compile && npm run lint",
-    "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js"
-  },
-  "dependencies": {
-    "glob": "^7.1.2",
-    "reflect-metadata": "^0.1.13"
-  },
-  "devDependencies": {
-    "@types/glob": "^7.1.3",
-    "@types/mocha": "^8.0.4",
-    "@types/node": "^12.11.7",
-    "@types/vscode": "^1.46.0",
-    "@typescript-eslint/eslint-plugin": "^4.14.1",
-    "@typescript-eslint/parser": "^4.14.1",
-    "eslint": "^7.19.0",
-    "mocha": "^8.2.1",
-    "ts-loader": "^8.1.0",
-    "typescript": "^4.1.3",
-    "vscode-test": "^1.5.0"
-  }
 }
