@@ -9,6 +9,6 @@ class CollectionIsNotEmpty extends PostfixHandler {
     @Target.Slice({})
     @Return.Replace()
     handleTarget(replacement: string) {
-        return new SnippetString(`CollectionUtils.isEmpty(${replacement})`);
+        return new SnippetString(`CollectionUtils.isNotEmpty(${replacement})`);
     }
 }
